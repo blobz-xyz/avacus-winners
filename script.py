@@ -4,7 +4,7 @@ reward = 10 # USDC
 csv_path = './csv/winners.csv'
 
 # print output (header)
-print("Address,USDC")
+print("#,Address,USDC")
 
 # print output (body)
 with open(csv_path, 'r') as file:
@@ -12,4 +12,4 @@ with open(csv_path, 'r') as file:
         if index == 0: continue # skip header
         [addr, _, _] = line.strip().split(',')
         addr = addr.lower()
-        print("{},{}".format(to_checksum_address(addr), reward))
+        print("1,{},{}".format(to_checksum_address(addr), reward))
